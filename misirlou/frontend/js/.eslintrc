@@ -67,7 +67,6 @@
                 "Im.Record",
                 "AsyncStatusRecord",
                 "AsyncErrorRecord",
-                "UploadSuccessRecord",
                 "SearchResultRecord",
                 "SearchStateRecord",
                 "SearchResource"
