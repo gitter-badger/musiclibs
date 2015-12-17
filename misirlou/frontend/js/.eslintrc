@@ -68,7 +68,6 @@
                 "AsyncStatusRecord",
                 "AsyncErrorRecord",
                 "UploadSuccessRecord",
-                "ManifestRecord",
                 "SearchResultRecord",
                 "SearchStateRecord",
                 "SearchResource"
