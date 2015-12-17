@@ -65,11 +65,8 @@
                 "Im.Set",
                 "Im.Seq",
                 "Im.Record",
-                "AsyncStatusRecord",
-                "AsyncErrorRecord",
                 "SearchResultRecord",
-                "SearchStateRecord",
-                "SearchResource"
+                "SearchStateRecord"
             ]
         }]
     }
