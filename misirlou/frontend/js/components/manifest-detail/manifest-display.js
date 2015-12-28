@@ -15,25 +15,16 @@ export default class ManifestDisplay extends React.Component {
     {
         const req = this.props.manifestRequest;
 
-        if (req && req.status === ERROR)
-        {
-            return (
-                <div className="container">
-                    <ErrorAlert error={req.error} />
-                </div>
-            );
-        }
+        return <ManifestViewer manifestInfo={req && req.value ? req.value : null} />;
 
-        if (!req || !req.value)
-        {
-            return (
-                <div className="container">
-                    <p>Loading...</p>
-                </div>
-            );
-        }
-
-        return <ManifestViewer manifestInfo={req.value} />;
+        // if (req && req.status === ERROR)
+        // {
+        //     return (
+        //         <div className="container">
+        //             <ErrorAlert error={req.error} />
+        //         </div>
+        //     );
+        // }
     }
 }
 

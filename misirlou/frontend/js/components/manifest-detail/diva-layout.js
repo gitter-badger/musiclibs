@@ -12,11 +12,14 @@ import Diva from './diva';
 export default class DivaLayout extends React.Component
 {
     static propTypes = {
+        // Optional
         config: PropTypes.shape({
             objectData: PropTypes.string.isRequired
-        }).isRequired,
+        }),
 
-        // React will validate on render anyway
+        // SUbcomponents: React will validate these render anyway
+        divaPlaceholder: PropTypes.any,
+        titleComponent: PropTypes.any,
         children: PropTypes.any
     };
 
@@ -44,7 +47,7 @@ export default class DivaLayout extends React.Component
         let childColumn;
 
         // Only initialize once we have access to the toolbar parent
-        if (this.state.toolbarParent)
+        if (this.state.toolbarParent && this.props.config)
         {
             const config = {
                 ...this.props.config,
@@ -69,8 +72,9 @@ export default class DivaLayout extends React.Component
                 <div className="row">
                     <div className="col-xs-12" ref="toolbar" />
                 </div>
+                {this.props.titleComponent}
                 <div className="row">
-                    <div className={divaClass}>{diva}</div>
+                    <div className={divaClass}>{diva || this.props.divaPlaceholder}</div>
                     {childColumn}
                 </div>
             </div>
