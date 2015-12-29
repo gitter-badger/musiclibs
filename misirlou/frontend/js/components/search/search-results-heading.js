@@ -62,3 +62,5 @@ function pluralize(number, noun)
 }
 
 export default SearchResultsHeading;
+
+export const __hotReload = true;
