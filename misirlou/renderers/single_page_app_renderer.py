@@ -23,6 +23,6 @@ class SinglePageAppRenderer (TemplateHTMLRenderer):
         context = super().resolve_context(data, request, response)
         context.update({
             'view_data': data,
-            'JSPM_USE_UNBUNDLED': settings.JSPM_USE_UNBUNDLED
+            'DEBUG_CLIENT_SIDE': settings.DEBUG_CLIENT_SIDE
         })
         return context

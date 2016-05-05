@@ -129,7 +129,7 @@ STATICFILES_DIRS = (
     ('js', os.path.join(BASE_DIR, 'misirlou/frontend/js')),
 )
 
-JSPM_USE_UNBUNDLED = False
+DEBUG_CLIENT_SIDE = False
 
 # Celery Settings
 # ===============
